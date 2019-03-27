@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWF.CA.Web", "SWF.CA.Web\SWF.CA.Web.csproj", "{E0EB308A-4D7C-494C-A885-6A38362E54AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWF.CA.Data", "SWF.CA.Data\SWF.CA.Data.csproj", "{BF5D1478-8583-4CF9-BE16-292A819C7876}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWF.CA.Services", "SWF.CA.Services\SWF.CA.Services.csproj", "{5F57EBC1-4DCD-4038-BBFA-6DE109D8726C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E0EB308A-4D7C-494C-A885-6A38362E54AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0EB308A-4D7C-494C-A885-6A38362E54AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0EB308A-4D7C-494C-A885-6A38362E54AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5D1478-8583-4CF9-BE16-292A819C7876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5D1478-8583-4CF9-BE16-292A819C7876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5D1478-8583-4CF9-BE16-292A819C7876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5D1478-8583-4CF9-BE16-292A819C7876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F57EBC1-4DCD-4038-BBFA-6DE109D8726C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F57EBC1-4DCD-4038-BBFA-6DE109D8726C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F57EBC1-4DCD-4038-BBFA-6DE109D8726C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F57EBC1-4DCD-4038-BBFA-6DE109D8726C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SWF.CA.Data;
+using SWF.CA.Services;
+using SWF.CA.Services.Interfaces;
 
 namespace SWF.CA.Web
 {
@@ -31,7 +35,8 @@ namespace SWF.CA.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddDbContext<CaContext>(x =>x.UseSqlServer(@"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=SWF.CA;Integrated Security=True"));
+            services.AddScoped<IInsurenceService, InsuranceService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -44,7 +49,7 @@ namespace SWF.CA.Web
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/InsuranceCalculation/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -57,7 +62,7 @@ namespace SWF.CA.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=InsuranceCalculation}/{action=Index}/{id?}");
             });
         }
     }
